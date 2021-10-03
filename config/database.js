@@ -4,12 +4,10 @@ module.exports = ({ env }) => ({
     default: {
       connector: 'mongoose',
       settings: {
-        host: env('DATABASE_Host',"reverse-marketplace.q2k9a.mongodb.net"),
+        uri: env('DATABASE_URI',"mongodb+srv://reversemarketplace1:AODr1gofW8bwPAKy@reverse-marketplace.q2k9a.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"),
         srv: env.bool('DATABASE_SRV', true),
         port: env.int('DATABASE_PORT', 27017),
         database: env('DATABASE_NAME',"Reverse-marketplace"),
-        username: env('DATABASE_USER',"reversemarketplace1"),
-        pasword: env('DATABASE_PASSWORD',"CUAE1P0Dqiq24J1T")
       },
       options: {
         authenticationDatabase: env('AUTHENTICATION_DATABASE', null),
