@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "10/05/2021 1:40:23 AM"
+    "x-generation-date": "10/05/2021 6:55:17 AM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -1582,7 +1582,7 @@
         ]
       }
     },
-    "/profiles": {
+    "/stores": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -1594,7 +1594,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Profile"
+                    "$ref": "#/components/schemas/Store"
                   }
                 }
               }
@@ -1633,7 +1633,7 @@
         },
         "summary": "",
         "tags": [
-          "Profile"
+          "Store"
         ],
         "parameters": [
           {
@@ -1783,7 +1783,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Profile"
+                  "$ref": "#/components/schemas/Store"
                 }
               }
             }
@@ -1821,7 +1821,7 @@
         },
         "summary": "",
         "tags": [
-          "Profile"
+          "Store"
         ],
         "requestBody": {
           "description": "",
@@ -1829,14 +1829,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProfile"
+                "$ref": "#/components/schemas/NewStore"
               }
             }
           }
         }
       }
     },
-    "/profiles/count": {
+    "/stores/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -1888,12 +1888,12 @@
         },
         "summary": "",
         "tags": [
-          "Profile"
+          "Store"
         ],
         "parameters": []
       }
     },
-    "/profiles/{id}": {
+    "/stores/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -1903,7 +1903,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Profile"
+                  "$ref": "#/components/schemas/Store"
                 }
               }
             }
@@ -1941,7 +1941,7 @@
         },
         "summary": "",
         "tags": [
-          "Profile"
+          "Store"
         ],
         "parameters": [
           {
@@ -1965,7 +1965,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Profile"
+                  "$ref": "#/components/schemas/Store"
                 }
               }
             }
@@ -2003,7 +2003,7 @@
         },
         "summary": "",
         "tags": [
-          "Profile"
+          "Store"
         ],
         "requestBody": {
           "description": "",
@@ -2011,7 +2011,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewProfile"
+                "$ref": "#/components/schemas/NewStore"
               }
             }
           }
@@ -2077,7 +2077,7 @@
         },
         "summary": "",
         "tags": [
-          "Profile"
+          "Store"
         ],
         "parameters": [
           {
@@ -4737,7 +4737,7 @@
           }
         }
       },
-      "Profile": {
+      "Store": {
         "required": [
           "id"
         ],
@@ -4745,21 +4745,135 @@
           "id": {
             "type": "string"
           },
+          "imgurl": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id",
+                "name",
+                "hash",
+                "mime",
+                "size",
+                "url",
+                "provider"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "alternativeText": {
+                  "type": "string"
+                },
+                "caption": {
+                  "type": "string"
+                },
+                "width": {
+                  "type": "integer"
+                },
+                "height": {
+                  "type": "integer"
+                },
+                "formats": {
+                  "type": "object"
+                },
+                "hash": {
+                  "type": "string"
+                },
+                "ext": {
+                  "type": "string"
+                },
+                "mime": {
+                  "type": "string"
+                },
+                "size": {
+                  "type": "number"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "previewUrl": {
+                  "type": "string"
+                },
+                "provider": {
+                  "type": "string"
+                },
+                "provider_metadata": {
+                  "type": "object"
+                },
+                "related": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "id_img": {
+            "type": "string"
+          },
           "name": {
             "type": "string"
           },
-          "weffwe": {
+          "Store_id": {
             "type": "string"
+          },
+          "Store_password": {
+            "type": "string"
+          },
+          "Store_name": {
+            "type": "string"
+          },
+          "sirname": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "slname": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           }
         }
       },
-      "NewProfile": {
+      "NewStore": {
         "properties": {
+          "id_img": {
+            "type": "string"
+          },
           "name": {
             "type": "string"
           },
-          "weffwe": {
+          "Store_id": {
             "type": "string"
+          },
+          "Store_password": {
+            "type": "string"
+          },
+          "Store_name": {
+            "type": "string"
+          },
+          "sirname": {
+            "type": "string"
+          },
+          "message": {
+            "type": "string"
+          },
+          "slname": {
+            "type": "string"
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date-time"
           },
           "created_by": {
             "type": "string"
@@ -5065,7 +5179,7 @@
       "name": "Product"
     },
     {
-      "name": "Profile"
+      "name": "Store"
     },
     {
       "name": "Email - Email"

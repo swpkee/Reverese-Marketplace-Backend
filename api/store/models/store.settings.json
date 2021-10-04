@@ -1,0 +1,51 @@
+{
+  "kind": "collectionType",
+  "collectionName": "stores",
+  "info": {
+    "name": "Store"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "imgurl": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "id_img": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "Store_id": {
+      "type": "string"
+    },
+    "Store_password": {
+      "type": "string"
+    },
+    "Store_name": {
+      "type": "string"
+    },
+    "sirname": {
+      "type": "string"
+    },
+    "message": {
+      "type": "string"
+    },
+    "slname": {
+      "type": "string"
+    }
+  }
+}
